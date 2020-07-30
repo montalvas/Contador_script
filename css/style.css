@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(72, 199, 221);
+    font-size: 18px;
+}
+
+header{
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1{
+    font-size: 36px;
+    text-transform: uppercase;
+    color: white;
+}
+
+section{
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.404);
+}
+
+section > div{
+    padding: 10px;
+    width: 100%;
+}
+
+section > div > label{
+    font-size: 20px;
+    padding-right: 5px;
+    width: 60px;
+    display: inline-block;
+}
+
+#action{
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a{
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
