@@ -24,7 +24,15 @@ function clicar(){
     var numstep = Number(step.value);
     var res = document.querySelector("div.box");
 
+    if (numstep < 0){
+        numstep *= -1;
+    }
+    else if (numstep == 0){
+        numstep = 1;
+    }
+
     if (numbeg < numend){
+        res.innerHTML = "";
         while(numbeg <= numend){
             res.innerHTML += `${numbeg} &#128073;`;
             numbeg += numstep;
@@ -32,9 +40,11 @@ function clicar(){
         res.innerHTML += "&#127937;"
     }
     else if (numbeg > numend){
+        res.innerHTML = "";
         while(numbeg >= numend){
             res.innerHTML += `${numbeg} &#128073;`;
             numbeg -= numstep;
         }
+        res.innerHTML += "&#127937;"
     }
 }
