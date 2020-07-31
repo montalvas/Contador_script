@@ -6,6 +6,7 @@ function clicar(){
     var begin = document.querySelector("input#begin");
     var end = document.querySelector("input#end");
     var step = document.querySelector("input#step");
+    var res = document.querySelector("div.box");
 
     if (begin.value.length == 0){
         window.alert("Falta o número inicial!");
@@ -22,7 +23,9 @@ function clicar(){
     var numbeg = Number(begin.value);
     var numend = Number(end.value);
     var numstep = Number(step.value);
-    var res = document.querySelector("div.box");
+    
+    res.innerHTML = "";
+    res.innerHTML = "Contando...<br>";
 
     if (numstep < 0){
         numstep *= -1;
@@ -32,7 +35,6 @@ function clicar(){
     }
 
     if (numbeg < numend){
-        res.innerHTML = "";
         while(numbeg <= numend){
             res.innerHTML += `${numbeg} &#128073;`;
             numbeg += numstep;
@@ -40,7 +42,6 @@ function clicar(){
         res.innerHTML += "&#127937;"
     }
     else if (numbeg > numend){
-        res.innerHTML = "";
         while(numbeg >= numend){
             res.innerHTML += `${numbeg} &#128073;`;
             numbeg -= numstep;
